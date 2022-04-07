@@ -1,29 +1,33 @@
 <template>
-  <header class="container bg-white p-2 d-flex align-items-center ">
-    <div class="row row-cols-auto align-items-center justify-content-between container-fluid">
-      <div class="col">
-        <img class="img-logo" src="../images/dark-logo.png" alt="logo">
-      </div>
-      <div class="col">
-        <ul class="d-flex m-0 align-items-center">
-          <li v-for="(element, index) in searchBar" :key="index" class="px-1">
-            <a href="#">
-              {{ element }}
-              <i class="fas fa-angle-down"></i>
+  <header>
+    <div class="container p-2 d-flex align-items-center ">      
+      <div class="row row-cols-auto align-items-center justify-content-between container-fluid p-0">
+        <div class="col">
+          <img class="img-logo" src="../images/dark-logo.png" alt="logo">
+        </div>
+        <div class="col">
+          <ul class="d-flex m-0 align-items-center">
+            <li v-for="(element, index) in searchBar" :key="index" class="px-3">
+              <a href="#">
+                {{ element }}
+                <i class="fas fa-angle-down"></i>
+                </a>
+            </li>
+            <li class="px-3">
+              <a href="#">
+                <i class="fas fa-user rounded-circle"></i> 
               </a>
-          </li>
-          <li class="px-3">
-            <a href="#">
-              <i class="fas fa-user rounded-circle"></i> 
-            </a>
-          </li>
-          <li>
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search..." >
-              <span class="input-group-text" id="addon-wrapping">@</span>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search..." >
+                <span class="input-group-text" id="addon-wrapping">
+                  <i class="fas fa-search"></i>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -44,7 +48,7 @@ export default {
 <style scoped lang="scss">
 @import '@/style/main-style.scss';
 header{
-  height: 5vh;
+  
   .img-logo{
     width: 150px;
   }
@@ -56,9 +60,14 @@ header{
     }
   }
   .input-group{
+    width: 70%;
     input, span{
-      background-color: #aeadae;
+      background-color: $HintOfRed;
       border: none;
+    }
+    input{
+      font-size: 1.2rem;
+      font-weight: 600;
     }
     span{
       color: $MountainMeadow;
