@@ -1,12 +1,17 @@
 <template>
   <div>
+    <Tutoring class="bg-white"/>
 
   </div>
 </template>
 
 <script>
+import Tutoring from './mainComponents/Tutoring.vue'
 export default {
-  name: 'IndexMain'
+  name: 'IndexMain',
+  components: {
+    Tutoring
+  }
 }
 </script>
 

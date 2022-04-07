@@ -14,7 +14,7 @@
         <div class="col-7 position-relative text-center">
           <!-- Ciclo v-for per img background -->
           <img :src="element.img" alt="backgound photo profile" class="position-absolute" :class="element.class" v-for="(element, index) in bgProfile" :key="index + 'a'">
-
+          <!-- immagine fissa del profilo -->
           <img src="@/images/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" alt="photo profile" class="rounded-circle position-relative" id="photo-profile">
         </div>
         <div class="col-12 d-flex justify-content-around align-items-center">
@@ -110,9 +110,9 @@ export default {
     padding: .5rem 2rem;
     width: 280px;
     i{
-      margin-right: 1rem;
+        margin-right: 1rem;
     }
-  }
+}
 }
 .col-7{
   .f-bg{
