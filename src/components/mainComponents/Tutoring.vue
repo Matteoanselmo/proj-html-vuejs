@@ -7,7 +7,7 @@
                     <h3 class="fw-bold">Acces <span>Smart Tutoring </span>Program For Benefits.</h3>
                 </div>
             </div>
-            <div class="row mb-4">
+            <div class="row mb-5">
                 <div class="col-12 d-flex justify-content-around">
                     <!-- CICLO LE CARD -->
                     <div class="card" v-for="(card, index) in smartCard" :key="index + 'c'">
@@ -26,8 +26,15 @@
                     <img :src="element.img" alt="backgound photo profile" class="position-absolute" :class="element.class" v-for="(element, index) in bgTutoring" :key="index + 'd'">
                     <img src="@/images/home-2-popup-video-poster.jpg" alt="popup photo poster" id="photo-poster" class="position-relative p-4">
                 </div>
-                <div class="col-5 p-4">
-                    <h6 class="text-uppercase fw-bold">get started <span>effortlesly</span></h6>
+                <div class="col-5 p-4 position-relative p-5">
+                    <div id="my-circle" class="rounded-pill position-absolute"></div>
+                    <h6 class="text-uppercase fw-bold mt-3">get started <span>effortlesly</span></h6>
+                    <h1 class="fw-bold fs-1">
+                        Enjoy our 
+                        <span class="fw-normal">Companionship</span>
+                    </h1>
+                    <p>Sneek peek into what has in store for you on our online teaching and mentoring portal. Seek for some hidden hints of early-bird rewords as well.</p>
+                    <span class="fw-bold text-decoration-underline">Download free guide <i class="fas fa-long-arrow-alt-right"></i></span>
                 </div>
             </div>
         </div>
@@ -132,11 +139,30 @@ export default {
     }
 }
 .col-5{
+    #my-circle{
+        height: 80px;
+        width: 80px;
+        border: 10px solid $Eunry;
+        left: 2%;
+        top: -10%;
+    }
     h6{
         color: $ShadyLady;
         span{
             color: $GunPowder;
         }
+    }
+    h1{
+        color: $GunPowder;
+        span{
+            color: $JungleGreen;
+        }
+    }
+    span{
+        color: $JungleGreen ;
+    }
+    p{
+        color: $Edward;
     }
 }
 </style>
