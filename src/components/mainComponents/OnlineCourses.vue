@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="row g-4">
-                <div class="col-6 d-flex mb-5" v-for="(card, index) in courses" :key="index +'e'">
+                <div class="col-6 d-flex mb-5 rounded" v-for="(card, index) in courses" :key="index +'e'">
                     <img :src="card.img" alt="card.price">
                     <div class="ms-3">
                         <h4 class="fw-bold">{{card.price}}</h4>
@@ -20,6 +20,11 @@
                         <span class="me-3"><i class="far fa-file-alt"></i> {{card.lessons}} Lessons</span>
                         <span><i class="far fa-user"></i> {{ card.students }} Students</span>
                     </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-12">
+                    <button class="btn my-3 px-5 text-white fw-bold">View All courses <i class="fas fa-long-arrow-alt-right"></i></button>
                 </div>
             </div>
         </div>
@@ -95,6 +100,8 @@ export default {
     }
 }
 .col-6{
+    padding: 1rem;
+    cursor: pointer;
     img{
         width: 160px;
         border-radius: 50% !important;
@@ -110,5 +117,11 @@ export default {
     span{
         color: $Edward;
     }
+}
+button{
+    background-color: $JungleGreen !important;
+}
+.col-6:hover{
+    background-color: white;
 }
 </style>
