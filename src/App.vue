@@ -3,7 +3,7 @@
     <Header class="mb-2 bg-white"/>
     <Jumbotron class="bg-white"/>
     <Main/>
-    <Footer/>
+    <Footer class="m-0 p-0"/>
   </div>
 </template>
 
