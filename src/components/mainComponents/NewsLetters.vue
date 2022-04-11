@@ -3,8 +3,8 @@
     <div class="container p-2 bg-white">
         <div class="row text-center justify-content-center position-relative">
             <div class="col-4">
-                <h3 class="fw-bold">Subscribe <span class="fw-normal">Newsletters</span></h3>
-                <p class="fw-bold">Enter your email address to register to our newsletter subscription delivered on a regular basis!</p>
+                <h3 class="fw-bold mb-4">Subscribe <span class="fw-normal">Newsletters</span></h3>
+                <p class="fw-bold mb-5">Enter your email address to register to our newsletter subscription delivered on a regular basis!</p>
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Enter your email">
                     <span class="input-group-text text-white fw-bold">Subscribe</span>
@@ -41,10 +41,10 @@ export default {
         bottom: 0%;
     }
     .my-left{
-        left: 15%;
+        left: 10%;
     }
     .my-right{
-        right: 15%;
+        right: 10%;
     }
     .input-group{
         input{
