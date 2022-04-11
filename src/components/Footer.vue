@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container p-2 py-5">
+    <div class="container p-2 pt-5">
       <div class="row">
         <div class="col-6 mb-5" v-for="(address, index ) in addressInfo" :key="index + 'k'" >
           <h5 class="mb-4 fw-bold">Address</h5>
@@ -17,19 +17,22 @@
         <div class="col-3" >
           <h5 class="mb-4 fw-bold">Explore</h5>
           <div class="d-flex flex-column flex-wrap" id="explore-info">
-            <p v-for="(info, index) in exploreInfo" :key="index + 'l'"> {{info}} </p>
+            <a v-for="(info, index) in exploreInfo" :key="index + 'l'"> {{info}} </a>
           </div>
         </div>
         <div class="col-3" >
           <h5 class="mb-4 fw-bold">Information</h5>
           <div class="d-flex flex-column flex-wrap" id="information-info">
-            <p v-for="(info, index) in informationInfo" :key="index + 'm'"> {{info}} </p>
+            <a href="#" v-for="(info, index) in informationInfo" :key="index + 'm'"> {{info}} </a>
           </div>
         </div>
         <div class="col-12 text-center p-5">
-          <p><i class="fas fa-copyright"></i> 2020 Maxcoach. All Rights reserved</p>
+          <a href="#"><i class="fas fa-copyright"></i> 2020 Maxcoach. All Rights reserved</a>
         </div>
       </div>
+      <a href="#" class="fs-1 p-4 text-white" id="return-to-top">
+        <i class="fas fa-long-arrow-alt-up "></i>
+      </a> 
     </div>
   </div>
 </template>
@@ -73,16 +76,33 @@ export default {
 }
 #explore-info{
   height: 150px;
-  p{
+  a{
     color: $Edward;
   }
 }
 #information-info{
-  p{
+  a{
     color: $Edward;
   }
 }
 .col-12{
-  color: $Edward;
+  a{
+    color: $Edward;
+  }
+}
+#return-to-top{
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  height: 80px;
+  width: 80px;
+  background-color: $JungleGreen;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i{
+    color: white;
+  }
 }
 </style>

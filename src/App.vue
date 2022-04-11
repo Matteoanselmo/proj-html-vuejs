@@ -24,9 +24,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 @import '@/style/main-style.scss';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 
 
 </style>
