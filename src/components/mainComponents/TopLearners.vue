@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="p-2">
+        <div class="container-fluid p-2">
             <div class="row text-center my-5 p-0">
                 <div class="col-12">
                     <h6 class="text-uppercase fw-bold">great awords about maxcoach</h6>
@@ -105,84 +105,87 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import '@/style/main-style.scss';
-.col-12{
-    h6{
-        color: $ShadyLady;
-    }
-    h3{
-        color: $GunPowder;
-        span{
-            color: $JungleGreen;
+.container-fluid{
+    width: calc(100% - 8px) !important;
+    .col-12{
+        h6{
+            color: $ShadyLady;
+        }
+        h3{
+            color: $GunPowder;
+            span{
+                color: $JungleGreen;
+            }
         }
     }
-}
-.selected-teacher-circle{
-    i{
-        font-size: small;
+    .selected-teacher-circle{
+        i{
+            font-size: small;
+            cursor: pointer;
+            filter: opacity(50%);
+        }
+    }
+    .teacher-wrapper{
         cursor: pointer;
         filter: opacity(50%);
-    }
-}
-.teacher-wrapper{
-    cursor: pointer;
-    filter: opacity(50%);
-    #teacher-min-card{
-        img{
-            height: 75px;
-            width: 75px;
+        #teacher-min-card{
+            img{
+                height: 75px;
+                width: 75px;
+            }
+        }
+        h5{
+            color: $GunPowder
+        }
+        p{
+            color: $Edward;
+        }
+        #teacher-min-card{
+            p:first-child{
+                color: $GunPowder;
+            }
         }
     }
-    h5{
-        color: $GunPowder
+    .teacher-wrapper.active{
+        filter: opacity(100);
     }
-    p{
-        color: $Edward;
+    .selected-teacher-circle{
+        i.active{
+            filter: opacity(100);
+            font-size: medium;
+        }
     }
-    #teacher-min-card{
-        p:first-child{
+    .free-trial{
+        margin-bottom: 6rem;
+        h6{
+            color: $GunPowder !important;
+            span{
+                color: $JungleGreen;
+            }
+        }
+        h3{
             color: $GunPowder;
         }
+        div{
+            .my-left{
+                left: 20%;
+            }
+            .my-right{
+                right: 20%;
+            }
+        }
     }
-}
-.teacher-wrapper.active{
-    filter: opacity(100);
-}
-.selected-teacher-circle{
-    i.active{
-        filter: opacity(100);
-        font-size: medium;
-    }
-}
-.free-trial{
-    margin-bottom: 6rem;
-    h6{
-        color: $GunPowder !important;
-        span{
+    .certification-row{
+        border-color: $HintOfRed;
+        h5{
+            color: $ShadyLady;
+        }
+        h5:first-child{
+            color: $GunPowder;
+        }
+        h2{
             color: $JungleGreen;
         }
-    }
-    h3{
-        color: $GunPowder;
-    }
-    div{
-        .my-left{
-            left: 20%;
-        }
-        .my-right{
-            right: 20%;
-        }
-    }
-}
-.certification-row{
-    border-color: $HintOfRed;
-    h5{
-        color: $ShadyLady;
-    }
-    h5:first-child{
-        color: $GunPowder;
-    }
-    h2{
-        color: $JungleGreen;
     }
 }
 </style>

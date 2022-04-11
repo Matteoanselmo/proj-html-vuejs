@@ -30,7 +30,7 @@
 
 <script>
 export default {
-    name: 'OnlineCourses',
+    name: 'BestBlog',
     data: function(){
         return{
             blogInstructions:[
