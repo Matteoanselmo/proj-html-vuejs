@@ -104,11 +104,6 @@ export default {
     }
   }
   button{
-    background-color: $JungleGreen;
-    color: white;
-    font-weight: 700;
-    padding: .5rem 2rem;
-    width: 280px;
     i{
         margin-right: 1rem;
     }

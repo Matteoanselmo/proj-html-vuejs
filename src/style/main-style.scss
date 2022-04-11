@@ -4,3 +4,14 @@
 body{
     background-color: $HintOfRed;
 }
+button{
+    background-color: $JungleGreen !important;
+    color: white !important;
+    font-weight: 700;
+    padding: .5rem 2rem;
+    width: 280px;
+}
+button:hover{
+    background-color: $GunPowder !important;
+    color: white;
+}

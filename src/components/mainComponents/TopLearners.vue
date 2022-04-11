@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="row g-3 justify-content-evenly">
-                <div class="col-3 bg-white rounded teacher-wrapper p-4 mb-4 " v-for="(teacher, index) in teacherCards" :key="index + 'f'" :class="(index === elementActive) ? ' active ' : ''" @click="elementActive = index">
+                <div class="col-3 bg-white rounded teacher-wrapper p-5 mb-4 " v-for="(teacher, index) in teacherCards" :key="index + 'f'" :class="(index === elementActive) ? ' active ' : ''" @click="elementActive = index">
                     <h5 class="fw-bold mb-3">{{teacher.title}}</h5>
                     <p class="fw-bold">{{teacher.text}}</p>
                     <div class="d-flex" id="teacher-min-card">
@@ -19,8 +19,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 text-center selected-teacher-circle">
+                <div class="col-12 text-center selected-teacher-circle mb-5">
                     <i class="fas fa-circle me-3" v-for="(teacher, index) in teacherCards" :key="index + 'g'" :class="(index === elementActive) ? ' active ' : ''" @click="elementActive = index"></i>
+                </div>
+            </div>
+            <div class="row text-center positione-relative free-trial">
+                <div class="col-12">
+                    <h6 class="text-uppercase fw-bold">Start today for getting <span>Online certification</span></h6>
+                    <h3 class="fw-bold">You can be your own guiding star with our help!</h3>
+                    <button class="btn my-3 px-5 text-white fw-bold">Get started now</button>
+                    <img class="position-absolute my-left" src="@/images/maxcoach-shape-01.png" alt=".">
+                    <img class="position-absolute my-right" src="@/images/maxcoach-shape-02.png" alt=".">
+                </div>
+            </div>
+            <div class="row text-center bg-white certification-row justify-content-center">
+                <div class="col-2 p-5 border-end border-start" v-for="(card, index) in certificationCards" :key="index + 'h'">
+                    <h5 class="fw-bold ">{{card.text}}</h5>
+                    <h2 class="fw-bold my-4 ">{{card.num}}</h2>
+                    <h5 class="fw-bold text-uppercase">{{card.description}}</h5>
                 </div>
             </div>
         </div>
@@ -58,15 +74,31 @@ export default {
                     img: require('@/images/testimonial-avata-04.jpg'),
                     clicked: false
                 },
+            ],
+            certificationCards: [
+                {
+                    text: 'Successfully trained',
+                    num: 1790,
+                    description: 'enrolled learners'
+                },
+                {
+                    text: 'Proudly Received',
+                    num: 19,
+                    description: 'countrywide awards'
+                },
+                {
+                    text: 'Firmly Established ',
+                    num: 24,
+                    description: 'local branches'
+                },
+                {
+                    text: 'Getting feautured on',
+                    num: 1090,
+                    description: 'blog posts'
+                },
             ]
         }
-    },
-    // methods: {
-    //     showTeacherCard(){
-    //         this.teacherCards.clicked = !this.teacherCards.clicked;
-    //     }
-    // }
-    
+    }
 }
 </script>
 
@@ -86,6 +118,7 @@ export default {
 }
 .selected-teacher-circle{
     i{
+        font-size: small;
         cursor: pointer;
         filter: opacity(50%);
     }
@@ -117,6 +150,39 @@ export default {
 .selected-teacher-circle{
     i.active{
         filter: opacity(100);
+        font-size: medium;
+    }
+}
+.free-trial{
+    margin-bottom: 6rem;
+    h6{
+        color: $GunPowder !important;
+        span{
+            color: $JungleGreen;
+        }
+    }
+    h3{
+        color: $GunPowder;
+    }
+    div{
+        .my-left{
+            left: 20%;
+        }
+        .my-right{
+            right: 20%;
+        }
+    }
+}
+.certification-row{
+    border-color: $HintOfRed;
+    h5{
+        color: $ShadyLady;
+    }
+    h5:first-child{
+        color: $GunPowder;
+    }
+    h2{
+        color: $JungleGreen;
     }
 }
 </style>

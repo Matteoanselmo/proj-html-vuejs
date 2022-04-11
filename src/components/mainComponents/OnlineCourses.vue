@@ -118,9 +118,6 @@ export default {
         color: $Edward;
     }
 }
-button{
-    background-color: $JungleGreen !important;
-}
 .col-6:hover{
     background-color: white;
 }

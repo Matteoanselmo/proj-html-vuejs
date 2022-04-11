@@ -3,6 +3,7 @@
     <OnlineCourses/>
     <Tutoring class="bg-white"/>
     <TopLearners/>
+    <BestBlog/>
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import Tutoring from './mainComponents/Tutoring.vue'
 import OnlineCourses from './mainComponents/OnlineCourses.vue'
 import TopLearners from './mainComponents/TopLearners.vue'
+import BestBlog from './mainComponents/BestBlog.vue'
 export default {
   name: 'IndexMain',
   components: {
     Tutoring,
     OnlineCourses,
-    TopLearners
+    TopLearners,
+    BestBlog
   }
 }
 </script>
