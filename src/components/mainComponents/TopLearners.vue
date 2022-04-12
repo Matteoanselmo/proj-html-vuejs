@@ -1,12 +1,14 @@
 <template>
     <div>
         <div class="container-fluid p-2">
+            <!-- TITLE -->
             <div class="row text-center my-5 p-0">
                 <div class="col-12">
                     <h6 class="text-uppercase fw-bold">great awords about maxcoach</h6>
                     <h3 class="fw-bold">Our <span>Top Learner's </span>verbatim</h3>
                 </div>
             </div>
+            <!-- CILCO CARD PRENDENDO GLI OGGETTI DALL'ARRAY-->
             <div class="row g-3 justify-content-evenly">
                 <div class="col-3 bg-white rounded teacher-wrapper p-5 mb-4 " v-for="(teacher, index) in teacherCards" :key="index + 'f'" :class="(index === elementActive) ? ' active ' : ''" @click="elementActive = index">
                     <h5 class="fw-bold mb-3">{{teacher.title}}</h5>
@@ -19,10 +21,12 @@
                         </div>
                     </div>
                 </div>
+                <!-- COLLEGO I PUNTINI IN BASE A QUANTI OGGETTI CONTIENE L'ARRAY -->
                 <div class="col-12 text-center selected-teacher-circle mb-5">
                     <i class="fas fa-circle me-3" v-for="(teacher, index) in teacherCards" :key="index + 'g'" :class="(index === elementActive) ? ' active ' : ''" @click="elementActive = index"></i>
                 </div>
             </div>
+            <!-- ONLINE CERTIFICATION -->
             <div class="row text-center positione-relative free-trial">
                 <div class="col-12">
                     <h6 class="text-uppercase fw-bold">Start today for getting <span>Online certification</span></h6>
@@ -32,6 +36,7 @@
                     <img class="position-absolute my-right" src="@/images/maxcoach-shape-02.png" alt=".">
                 </div>
             </div>
+            <!-- PRENDO DALL'ARY GLI OGGETTI PER CICLARE TUTTE LE CARD -->
             <div class="row text-center bg-white certification-row justify-content-center">
                 <div class="col-2 p-5 border-end border-start" v-for="(card, index) in certificationCards" :key="index + 'h'">
                     <h5 class="fw-bold ">{{card.text}}</h5>

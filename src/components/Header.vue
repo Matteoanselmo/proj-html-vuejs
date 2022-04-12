@@ -10,7 +10,7 @@
             <li v-for="(element, index) in searchBar" :key="index" class="px-3">
               <a href="#">
                 {{ element }}
-                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-down ms-1"></i>
                 </a>
             </li>
             <li class="px-3">
@@ -56,7 +56,10 @@ header{
     list-style: none;
     a{
       text-decoration: none;
-      color: $CodGrey;
+      color: $Edward;
+      i{
+        font-size: smaller;
+      }
     }
   }
   .input-group{

@@ -1,8 +1,11 @@
+// BOOTSTRAP
 @import '~bootstrap/scss/bootstrap.scss';
+// FONTAWSOME
 @import "./partials/_variables.scss";
 
 body{
     background-color: $HintOfRed;
+    font-family: sans-serif;
 }
 button{
     background-color: $JungleGreen !important;

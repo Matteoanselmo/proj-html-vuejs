@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <Header class="mb-2 bg-white"/>
+    <Header class="bg-white shadow-sm position-relative"/>
     <Jumbotron class="bg-white"/>
     <Main/>
-    <Footer class="m-0 p-0"/>
+    <Footer class="position-relative"/>
   </div>
 </template>
 

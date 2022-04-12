@@ -30,7 +30,8 @@
           <a href="#"><i class="fas fa-copyright"></i> 2020 Maxcoach. All Rights reserved</a>
         </div>
       </div>
-      <a href="#" class="fs-1 p-4 text-white" id="return-to-top">
+      <!-- BUTTON PER TORNARE IN TOP PAGINA -->
+      <a href="#" class="fs-1 p-4 text-white shadow-lg position-absolute" id="return-to-top">
         <i class="fas fa-long-arrow-alt-up "></i>
       </a> 
     </div>
@@ -75,7 +76,7 @@ export default {
   color: $Edward;
 }
 #explore-info{
-  height: 150px;
+  height: 95px;
   a{
     color: $Edward;
   }
@@ -91,7 +92,7 @@ export default {
   }
 }
 #return-to-top{
-  position: fixed;
+  
   bottom: 2%;
   right: 2%;
   height: 80px;

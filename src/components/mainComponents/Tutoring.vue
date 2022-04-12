@@ -1,6 +1,7 @@
 <template>
-    <div>
+    <div class="shadow">
         <div class="container p-2">
+            <!-- TITOLO -->
             <div class="row text-center mb-4">
                 <div class="col-12">
                     <h6 class="text-uppercase fw-bold">maxcoach available courses</h6>
@@ -9,7 +10,7 @@
             </div>
             <div class="row mb-5">
                 <div class="col-12 d-flex justify-content-around">
-                    <!-- CICLO LE CARD -->
+                    <!-- CICLO CARD -->
                     <div class="card" v-for="(card, index) in smartCard" :key="index + 'c'">
                         <img :src="card.img" class="card-img-top" :alt="card.title">
                         <div class="card-body">
@@ -20,11 +21,11 @@
                     </div>
                 </div>
             </div>
-
+                <!-- YOUTUBE PART -->
             <div class="row mb-4 px-5">
                 <div class="col-7 text-center position-relative">
                     <img :src="element.img" alt="backgound photo profile" class="position-absolute" :class="element.class" v-for="(element, index) in bgTutoring" :key="index + 'd'">
-                    <img src="@/images/home-2-popup-video-poster.jpg" alt="popup photo poster" id="photo-poster" class="position-relative p-4">
+                    <img src="@/images/home-2-popup-video-poster.jpg" alt="popup photo poster" id="photo-poster" class="position-relative p-4 ">
                 </div>
                 <div class="col-5 p-4 position-relative p-5">
                     <div id="my-circle" class="rounded-pill position-absolute"></div>
@@ -128,7 +129,7 @@ export default {
         left: 0%;
     }
     .s-bg{
-        bottom: -7%;
+        bottom: -6%;
         right: 0%;
     }
     .t-bg{
