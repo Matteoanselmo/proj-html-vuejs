@@ -2,11 +2,13 @@
   <header>
     <div class="container p-2 d-flex align-items-center ">      
       <div class="row row-cols-auto align-items-center justify-content-between container-fluid p-0">
+        <!-- logo section -->
         <div class="col">
           <img class="img-logo" src="../images/dark-logo.png" alt="logo">
         </div>
         <div class="col">
           <ul class="d-flex m-0 align-items-center">
+            <!-- CICLO GLI ELEMENTI IN HEADER IN UNA LISTA -->
             <li v-for="(element, index) in searchBar" :key="index" class="px-3">
               <a href="#">
                 {{ element }}

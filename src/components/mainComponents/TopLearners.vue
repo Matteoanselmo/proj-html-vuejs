@@ -53,7 +53,7 @@ export default {
     name: 'TopLearners',
     data: function(){
         return{
-            elementActive : 1,
+            elementActive : 0,
             teacherCards: [
                 {
                     title: 'It\'s a choise of quality for people with special needs',
@@ -102,6 +102,17 @@ export default {
                     description: 'blog posts'
                 },
             ]
+        }
+    },
+    created: function(){
+        setInterval( this.scrollFunction , 750);
+    },
+    methods: {
+        scrollFunction(){
+            if(this.elementActive >= this.teacherCards.length){
+                this.elementActive = -1;
+            }
+            this.elementActive++;
         }
     }
 }
